@@ -1,26 +1,112 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exercise_AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-36-fL4" userLabel="Blue ">
+                                <rect key="frame" x="20" y="20" width="984" height="99"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00H-fz-EEf">
+                                        <rect key="frame" x="113" y="38" width="118" height="23"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-t2-aXh">
+                                        <rect key="frame" x="461.5" y="32" width="61" height="34"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21977724866663562" green="0.69009189115932346" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="2dK-pM-bWt"/>
+                                    <constraint firstItem="xb7-t2-aXh" firstAttribute="centerX" secondItem="eRY-36-fL4" secondAttribute="centerX" id="2sf-1b-fmV"/>
+                                    <constraint firstItem="00H-fz-EEf" firstAttribute="leading" secondItem="eRY-36-fL4" secondAttribute="leading" constant="113" id="9bP-de-HmC"/>
+                                    <constraint firstAttribute="trailing" secondItem="00H-fz-EEf" secondAttribute="trailing" constant="112" id="LDS-fP-lrz"/>
+                                    <constraint firstAttribute="bottom" secondItem="00H-fz-EEf" secondAttribute="bottom" constant="38" id="QSc-S8-X7B"/>
+                                    <constraint firstItem="00H-fz-EEf" firstAttribute="top" secondItem="eRY-36-fL4" secondAttribute="top" constant="38" id="Rxd-KA-09l"/>
+                                    <constraint firstItem="xb7-t2-aXh" firstAttribute="centerY" secondItem="eRY-36-fL4" secondAttribute="centerY" id="WsX-Em-95l"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="00H-fz-EEf"/>
+                                        <exclude reference="xb7-t2-aXh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="00H-fz-EEf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="00H-fz-EEf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="00H-fz-EEf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="xb7-t2-aXh"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPO-ie-MUB" userLabel="Yellow">
+                                <rect key="frame" x="20" y="1206" width="140" height="140"/>
+                                <color key="backgroundColor" red="1" green="0.80290162259999998" blue="0.1490231923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="A9o-M2-DRV"/>
+                                    <constraint firstAttribute="height" constant="140" id="g7J-PR-zeh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YA3-sX-8Br" userLabel="Red">
+                                <rect key="frame" x="864" y="1206" width="140" height="140"/>
+                                <color key="backgroundColor" red="1" green="0.17705579250366177" blue="0.13263788292743139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="0sT-Vf-TVn"/>
+                                    <constraint firstAttribute="width" constant="140" id="6RS-Af-ZBO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wPO-ie-MUB" secondAttribute="bottom" constant="20" id="IvK-wL-aeD"/>
+                            <constraint firstItem="YA3-sX-8Br" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="K86-y7-wfB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eRY-36-fL4" secondAttribute="trailing" id="Pfa-51-w9u"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YA3-sX-8Br" secondAttribute="bottom" constant="20" id="RSf-Ez-J9H"/>
+                            <constraint firstItem="eRY-36-fL4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eYG-Ym-yNf"/>
+                            <constraint firstItem="wPO-ie-MUB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qBB-xM-Kfc"/>
+                            <constraint firstItem="eRY-36-fL4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uSt-zK-L4S"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="114.375" y="123.75"/>
         </scene>
     </scenes>
 </document>
